@@ -1,0 +1,37 @@
+create table Equipo(
+noEquipo int(8) primary key not null,
+proposito varchar(35);
+
+create table Integrante(
+noControl varchar(8) primary key not null,
+nombre varchar(40) not null,
+primerApellido varchar(40)not null,
+segundoApellido varchar(40) not null,
+noEquipo int(8),
+constraint foreign key (noEquipo)
+references Equipo (noEquipo));
+update on cascade 
+
+create table Usuarios(
+correo varchar(40) primary key not null,
+nombre varchar(40) not null,
+primerApellido varchar(40) not null,
+noControl varchar(8) not null,
+contrasenia varchar(40) not null,
+carrera varchar(40) not null,
+tipoUsuario varchar(40) not null);
+
+
+create table Integrante(
+  noControl varchar(8) primary key not null,
+  nombre varchar(40) not null,
+  primerApellido varchar(40) not null,
+  segundoApellido varchar(40) not null,
+  noEquipo int(8)
+);
+ALTER TABLE Integrante 
+add constraint FOREIGN KEY (noEquipo) REFERENCES Equipo(noEquipo);
+
+Alter table Integrante
+add constrain foreign key (noEquipo)
+references Equipo (noEquipo);
