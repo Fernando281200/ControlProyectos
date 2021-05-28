@@ -21,6 +21,19 @@ contrasenia varchar(40) not null,
 carrera varchar(40) not null,
 tipoUsuario varchar(40) not null);
 
+
+
+create table Historicos(
+noFolio not null,
+noEquipo not null,
+fecha_inicial Date not null,
+fecha_final Date,
+);
+ALTER TABLE Historicos
+add constraint FOREIGN KEY (noFolio) REFERENCES Proyectos(noFolio);
+ALTER TABLE Historicos
+add constraint FOREIGN KEY (noEquipo) REFERENCES Equipos(noEquipo);
+
 create table Primitivas(
 noFolio not null,
 tituloPrimitivas varchar(100) not null,
