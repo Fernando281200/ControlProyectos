@@ -1,16 +1,16 @@
-create table Equipos(
+create table Equipo(
 noEquipo int(8) primary key not null,
 proposito varchar(35);
 
-create table Integrantes(
-  noControl varchar(8) primary key not null,
-  nombre varchar(40) not null,
-  primerApellido varchar(40) not null,
-  segundoApellido varchar(40) not null,
-  noEquipo int(8)
-);
-ALTER TABLE Integrantes
-add constraint FOREIGN KEY (noEquipo) REFERENCES Equipo(noEquipo);
+create table Integrante(
+noControl varchar(8) primary key not null,
+nombre varchar(40) not null,
+primerApellido varchar(40)not null,
+segundoApellido varchar(40) not null,
+noEquipo int(8),
+constraint foreign key (noEquipo)
+references Equipo (noEquipo));
+update on cascade 
 
 create table Usuarios(
 correo varchar(40) primary key not null,
@@ -21,12 +21,36 @@ contrasenia varchar(40) not null,
 carrera varchar(40) not null,
 tipoUsuario varchar(40) not null);
 
-create table Primitivas(
-noFolio not null,
-tituloPrimitivas varchar(100) not null,
-justificacionPrimitivas text(20000)not null,
-alcancesPrimitivas text(10000) not null,
-resumenPrimitivas text (15000)
+CREATE TABLE Proyectos(
+    noFolio varchar(12) PRIMARY KEY NOT NULL,
+    correo VARCHAR(50),
+    duenio VARCHAR (50) not NULL,
+    coasesor VARCHAR(150),
+    titulo VARCHAR (150) not NULL,
+    justificacion TEXT(22000)not NULL,
+    alcances TEXT (13000)not NULL,
+    resumen TEXT (25000)not NULL ,
+    estatus VARCHAR(20) not NULL ,
+    aprobacion VARCHAR (20) not NULL
+
 );
-ALTER TABLE Primitivas
-add constraint FOREIGN KEY (noFolio) REFERENCES Proyectos(noFolio);
+
+create table Integrante(
+  noControl varchar(8) primary key not null,
+  nombre varchar(40) not null,
+  primerApellido varchar(40) not null,
+  segundoApellido varchar(40) not null,
+  noEquipo int(8)
+);
+ALTER TABLE Integrante 
+add constraint FOREIGN KEY (noEquipo) REFERENCES Equipo(noEquipo);
+
+Alter table Integrante
+add constrain foreign key (noEquipo)
+references Equipo (noEquipo);
+
+
+
+
+
+
