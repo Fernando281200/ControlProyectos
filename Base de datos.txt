@@ -21,6 +21,21 @@ contrasenia varchar(40) not null,
 carrera varchar(40) not null,
 tipoUsuario varchar(40) not null);
 
+CREATE TABLE Proyectos(
+    noFolio varchar(12) PRIMARY KEY NOT NULL,
+    correo VARCHAR(50),
+    duenio VARCHAR (50) not NULL,
+    coasesor VARCHAR(150),
+    titulo VARCHAR (150) not NULL,
+    justificacion TEXT(22000)not NULL,
+    alcances TEXT (13000)not NULL,
+    resumen TEXT (25000)not NULL ,
+    estatus VARCHAR(20) not NULL ,
+    aprobacion VARCHAR (20) not NULL
+
+);
+
+
 create table Primitivas(
 noFolio not null,
 tituloPrimitivas varchar(100) not null,
