@@ -21,7 +21,6 @@ contrasenia varchar(40) not null,
 carrera varchar(40) not null,
 tipoUsuario varchar(40) not null);
 
-
 CREATE TABLE Proyectos(
     noFolio varchar(12) PRIMARY KEY NOT NULL,
     correo VARCHAR(50),
@@ -35,7 +34,6 @@ CREATE TABLE Proyectos(
     aprobacion VARCHAR (20) not NULL
 
 );
-
 
 create table Historicos(
 noFolio not null,
