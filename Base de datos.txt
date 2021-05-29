@@ -54,4 +54,4 @@ alcancesPrimitivas text(10000) not null,
 resumenPrimitivas text (15000)
 );
 ALTER TABLE Primitivas
-add constraint FOREIGN KEY (noFolio) REFERENCES Proyectos(noFolio);
+add constraint FOREIGN KEY (noFolio) REFERENCES Proyectos(noFolio);aqui le movi algo
