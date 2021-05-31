@@ -1,16 +1,18 @@
 create table Equipos(
 noEquipo int(8) primary key not null,
-proposito varchar(35);
+proposito varchar(35),
+noControl varchar(8) 
+);
+ALTER TABLE Equipos
+add constraint FOREIGN KEY (noEquipo) REFERENCES Integrantes(noEquipo);
 
 create table Integrantes(
   noControl varchar(8) primary key not null,
   nombre varchar(40) not null,
   primerApellido varchar(40) not null,
-  segundoApellido varchar(40) not null,
-  noEquipo int(8)
+  segundoApellido varchar(40) not null
 );
-ALTER TABLE Integrantes
-add constraint FOREIGN KEY (noEquipo) REFERENCES Equipo(noEquipo);
+
 
 create table Usuarios(
 correo varchar(40) primary key not null,
@@ -35,14 +37,10 @@ CREATE TABLE Proyectos(
     avance DOUBLE(5,2) NOT NULL
 
 );
-
-
 ALTER TABLE Proyectos
 ADD CONSTRAINT CHECK (estatus='ACTIVO' OR estatus='INACTIVO');
-
 ALTER TABLE Proyectos
 ADD CONSTRAINT CHECK (aprobacion='APROBADO' OR aprobacion='NO APROBADO');
-
 ALTER TABLE Proyectos
 ADD CONSTRAINT CHECK (avance>=0 OR avance<=100);
 
