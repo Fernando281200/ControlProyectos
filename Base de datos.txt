@@ -4,7 +4,7 @@ proposito varchar(35),
 noControl varchar(8) 
 );
 ALTER TABLE Equipos
-add constraint FOREIGN KEY (noEquipo) REFERENCES Integrantes(noEquipo);
+add constraint FOREIGN KEY (noContrl) REFERENCES Integrantes(noControl);
 
 create table Integrantes(
   noControl varchar(8) primary key not null,
@@ -63,4 +63,4 @@ alcancesPrimitivas text(10000) not null,
 resumenPrimitivas text (15000)
 );
 ALTER TABLE Primitivas
-add constraint FOREIGN KEY (noFolio) REFERENCES Proyectos(noFolio);aqui le movi algo
+add constraint FOREIGN KEY (noFolio) REFERENCES Proyectos(noFolio);
