@@ -7,7 +7,7 @@ contrasenia varchar(40) not null,
 carrera varchar(40) not null,
 tipoUsuario varchar(40) not null);
 ALTER TABLE Usuarios
-ADD CONSTRAINT CHECK (estatus='ASESOR' OR estatus='DEPARTAMENTO');
+ADD CONSTRAINT CHECK (tipoUsuario='ASESOR' OR tipoUsuario='DEPARTAMENTO');
 
 create table Integrantes(
   noControl varchar(8) primary key not null,
