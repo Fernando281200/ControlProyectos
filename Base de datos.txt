@@ -34,8 +34,9 @@ CREATE TABLE Proyectos(
     resumen TEXT (25000)not NULL ,
     estatus VARCHAR(20) not NULL ,
     aprobacion VARCHAR (20) not NULL,
-    avance DOUBLE(5,2) NOT NULL
-
+    avance DOUBLE(5,2) NOT NULL,
+    fecha_registro date NOT NULL,
+    directorio varchar(150) NOT NULL;
 );
 ALTER TABLE Proyectos
 ADD CONSTRAINT CHECK (estatus='ACTIVO' OR estatus='INACTIVO');
