@@ -22,7 +22,7 @@ proposito varchar(35),
 noControl varchar(8) 
 );
 ALTER TABLE Equipos
-add constraint FOREIGN KEY (noContrl) REFERENCES Integrantes(noControl);
+add constraint FOREIGN KEY (noControl) REFERENCES Integrantes(noControl);
 
 CREATE TABLE Proyectos(
     noFolio varchar(12) PRIMARY KEY NOT NULL,
