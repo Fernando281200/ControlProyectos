@@ -18,7 +18,7 @@ create table Integrantes(
 
 create table Equipos(
 noEquipo int(8) primary key not null,
-proposito varchar(35),
+proposito varchar(100),
 noControl varchar(8) 
 );
 ALTER TABLE Equipos
