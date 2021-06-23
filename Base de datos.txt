@@ -10,6 +10,11 @@ tipoUsuario varchar(40) not null);
 ALTER TABLE Usuarios
 ADD CONSTRAINT CHECK (tipoUsuario='ASESOR' OR tipoUsuario='DEPARTAMENTO');
 
+create table Equipos(
+noEquipo int(8) primary key not null,
+proposito varchar(100)
+);
+
 create table Integrantes(
   noControl varchar(8) primary key not null,
   nombre varchar(40) not null,
@@ -20,10 +25,6 @@ create table Integrantes(
 ALTER TABLE Integrantes
 add constraint FOREIGN KEY (noEquipo) REFERENCES Equipos(noEquipo);
 
-create table Equipos(
-noEquipo int(8) primary key not null,
-proposito varchar(100)
-);
 
 CREATE TABLE Proyectos(
     noFolio varchar(12) PRIMARY KEY NOT NULL,
