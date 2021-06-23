@@ -14,16 +14,16 @@ create table Integrantes(
   noControl varchar(8) primary key not null,
   nombre varchar(40) not null,
   primerApellido varchar(40) not null,
-  segundoApellido varchar(40) not null
+  segundoApellido varchar(40) not null,
+  noEquipo int(8) not null
 );
+ALTER TABLE Integrantes
+add constraint FOREIGN KEY (noEquipo) REFERENCES Equipos(noEquipo);
 
 create table Equipos(
 noEquipo int(8) primary key not null,
-proposito varchar(100),
-noControl varchar(8) 
+proposito varchar(100)
 );
-ALTER TABLE Equipos
-add constraint FOREIGN KEY (noControl) REFERENCES Integrantes(noControl);
 
 CREATE TABLE Proyectos(
     noFolio varchar(12) PRIMARY KEY NOT NULL,
@@ -40,6 +40,7 @@ CREATE TABLE Proyectos(
     fecha_registro date NOT NULL,
     directorio varchar(150) NOT NULL
 );
+
 ALTER TABLE Proyectos
 ADD CONSTRAINT CHECK (estatus='ACTIVO' OR estatus='INACTIVO');
 ALTER TABLE Proyectos
