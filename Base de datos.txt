@@ -2,6 +2,7 @@ create table Usuarios(
 correo varchar(40) primary key not null,
 nombre varchar(40) not null,
 primerApellido varchar(40) not null,
+segundoApellido varchar(40) not null,
 noControl varchar(8) not null,
 contrasenia varchar(40) not null,
 carrera varchar(40) not null,
