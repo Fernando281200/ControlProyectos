@@ -63,9 +63,9 @@ add constraint FOREIGN KEY (noEquipo) REFERENCES Equipos(noEquipo);
 create table Primitivas(
 noFolio varchar(12) not null,
 tituloPrimitivas varchar(100) not null,
-justificacionPrimitivas text(20000)not null,
-alcancesPrimitivas text(10000) not null,
-resumenPrimitivas text (15000)
+justificacionPrimitivas varchar(100)not null,
+alcancesPrimitivas varchar(100) not null,
+resumenPrimitivas varchar (100)
 );
 ALTER TABLE Primitivas
 add constraint FOREIGN KEY (noFolio) REFERENCES Proyectos(noFolio);
