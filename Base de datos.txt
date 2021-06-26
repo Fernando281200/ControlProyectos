@@ -1,5 +1,5 @@
 create table Usuarios(
-correo varchar(40) primary key not null,
+correo varchar(60) primary key not null,
 nombre varchar(40) not null,
 primerApellido varchar(40) not null,
 segundoApellido varchar(40) not null,
