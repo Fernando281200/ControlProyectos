@@ -42,7 +42,9 @@ CREATE TABLE Proyectos(
     aprobacion VARCHAR (20) not NULL,
     avance DOUBLE(5,2) NOT NULL,
     fecha_registro date NOT NULL,
-    directorio varchar(150) NOT NULL
+    directorio varchar(150) NOT NULL,
+    similitud DOUBLE(5,2) not null,
+    folioSimilar varchar(12)
 );
 
 ALTER TABLE Proyectos
