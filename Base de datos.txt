@@ -21,13 +21,12 @@ create table Integrantes(
 
 
 create table Equipos(
-noEquipo int(8) primary key not null,
+noEquipo int(10) primary key not null,
 proposito varchar(100),
-noControl varchar(8)
+fecha_inicial Date not null,
+fecha_final Date
 );
 
-ALTER TABLE Equipos
-add constraint FOREIGN KEY (noControl) REFERENCES Integrantes(noControl);
 
 
 CREATE TABLE Proyectos(
@@ -54,15 +53,17 @@ ALTER TABLE Proyectos
 ADD CONSTRAINT CHECK (avance>=0 OR avance<=100);
 
 create table Historicos(
+id int(10) primary key not null,
 noFolio varchar(12) not null,
-noEquipo int(8) not null,
-fecha_inicial Date not null,
-fecha_final Date
+noEquipo int(10) not null,
+noControl varchar(8)not null
 );
 ALTER TABLE Historicos
 add constraint FOREIGN KEY (noFolio) REFERENCES Proyectos(noFolio);
 ALTER TABLE Historicos
 add constraint FOREIGN KEY (noEquipo) REFERENCES Equipos(noEquipo);
+ALTER TABLE Historicos
+add constraint FOREIGN KEY (noControl) REFERENCES Integrantes(noControl);
 
 create table Primitivas(
 noFolio varchar(12) not null,
