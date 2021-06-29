@@ -20,7 +20,7 @@ create table Integrantes(
 
 
 create table Equipos(
-noEquipo int(10) primary key not nullAUTO_INCREMENT,
+noEquipo int(10) primary key not null AUTO_INCREMENT,
 proposito varchar(100),
 fecha_inicial Date not null,
 fecha_final Date
