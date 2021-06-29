@@ -15,13 +15,12 @@ create table Integrantes(
   noControl varchar(8) primary key not null,
   nombre varchar(40) not null,
   primerApellido varchar(40) not null,
-  segundoApellido varchar(40) not null,
-  noEquipo int(8) not null
+  segundoApellido varchar(40) not null
 );
 
 
 create table Equipos(
-noEquipo int(10) primary key not null,
+noEquipo int(10) primary key not nullAUTO_INCREMENT,
 proposito varchar(100),
 fecha_inicial Date not null,
 fecha_final Date
@@ -42,9 +41,7 @@ CREATE TABLE Proyectos(
     aprobacion VARCHAR (20) not NULL,
     avance DOUBLE(5,2) NOT NULL,
     fecha_registro date NOT NULL,
-    directorio varchar(150) NOT NULL,
-    similitud DOUBLE(5,2) not null,
-    folioSimilar varchar(12)
+    directorio varchar(150) NOT NULL
 );
 
 ALTER TABLE Proyectos
@@ -55,7 +52,7 @@ ALTER TABLE Proyectos
 ADD CONSTRAINT CHECK (avance>=0 OR avance<=100);
 
 create table Historicos(
-id int(10) primary key not null,
+id int(10) primary key not null AUTO_INCREMENT,
 noFolio varchar(12) not null,
 noEquipo int(10) not null,
 noControl varchar(8)not null
