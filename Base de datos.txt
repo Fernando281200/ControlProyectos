@@ -68,6 +68,7 @@ ALTER TABLE Historicos
 add constraint FOREIGN KEY (noControl) REFERENCES Integrantes(noControl);
 
 create table Primitivas(
+id int(10) auto_increment primary key not null,
 noFolio varchar(12) not null,
 tituloPrimitivas varchar(100) not null,
 justificacionPrimitivas varchar(100)not null,
