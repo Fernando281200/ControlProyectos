@@ -45,7 +45,7 @@ CREATE TABLE Proyectos(
 );
 
 ALTER TABLE Proyectos
-ADD CONSTRAINT CHECK (estatus='ACTIVO' OR estatus='INACTIVO');
+ADD CONSTRAINT CHECK (estatus='ACTIVO' OR estatus='INACTIVO' OR estatus='TERMINADO');
 ALTER TABLE Proyectos
 ADD CONSTRAINT CHECK (aprobacion='APROBADO' OR aprobacion='REVISION' OR aprobacion='NO APROBADO');
 ALTER TABLE Proyectos
