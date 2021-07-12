@@ -15,7 +15,7 @@ tipoUsuario varchar(40) not null);
 ALTER TABLE Usuarios
 ADD CONSTRAINT CHECK (tipoUsuario='ASESOR' OR tipoUsuario='DEPARTAMENTO' OR tipoUsuario='ROOT');
 ALTER TABLE Usuarios
-ADD CONSTRAINT add constraint FOREIGN KEY (carrera) REFERENCES Carreras(carrera);
+ADD CONSTRAINT FOREIGN KEY (carrera) REFERENCES Carreras(carrera);
 
 create table Integrantes(
   noControl varchar(8) primary key not null,
