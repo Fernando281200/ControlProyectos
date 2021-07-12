@@ -1,7 +1,7 @@
 create table Carreras(
 carrera varchar(50) primary key not null,
-porcentajeMin number(3) not null,
-porcentajeMax number(3) not null);
+porcentajeMin int(3) not null,
+porcentajeMax int(3) not null);
 
 create table Usuarios(
 correo varchar(60) primary key not null,
