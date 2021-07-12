@@ -80,6 +80,7 @@ resumenPrimitivas varchar (100)
 );
 ALTER TABLE Primitivas
 add constraint FOREIGN KEY (noFolio) REFERENCES Proyectos(noFolio);
+
 insert into carreras values('Administrador',0,0);
 insert into carreras values('Ingenieria en Sistemas Computacionales',0,0);
 insert into carreras values('Ingenieria Industrial',0,0);
