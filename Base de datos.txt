@@ -81,4 +81,12 @@ resumenPrimitivas varchar (100)
 ALTER TABLE Primitivas
 add constraint FOREIGN KEY (noFolio) REFERENCES Proyectos(noFolio);
 insert into carreras values('Administrador',0,0);
+insert into carreras values('Ingenieria en Sistemas Computacionales',0,0);
+insert into carreras values('Ingenieria Industrial',0,0);
+insert into carreras values('Ingenieria Logistica',0,0);
+insert into carreras values('Ingenieria Mecatronica',0,0);
+insert into carreras values('Ingenieria Electronica',0,0);
+insert into carreras values('Ingenieria Quimica',0,0);
+insert into carreras values('Ingenieria en Gestion Empresarial',0,0);
+insert into carreras values('Ingenieria en TIC's',0,0);
 insert into usuarios values('xrootx@toluca.tecnm.mx','Axel','Flores','Orozco','XXX00XXX','XRoot1tecnmMX','Administrador','ROOT');
