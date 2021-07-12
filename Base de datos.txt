@@ -10,7 +10,7 @@ primerApellido varchar(40) not null,
 segundoApellido varchar(40) not null,
 noControl varchar(8) not null,
 contrasenia varchar(40) not null,
-carrera varchar(40) not null,
+carrera varchar(50) not null,
 tipoUsuario varchar(40) not null);
 ALTER TABLE Usuarios
 ADD CONSTRAINT CHECK (tipoUsuario='ASESOR' OR tipoUsuario='DEPARTAMENTO' OR tipoUsuario='ROOT');
