@@ -91,4 +91,4 @@ insert into carreras values('Ingenieria Electromecanica',0,0);
 insert into carreras values('Ingenieria Quimica',0,0);
 insert into carreras values('Ingenieria en Gestion Empresarial',0,0);
 insert into carreras values('Ingeniería en TICs',0,0);
-insert into usuarios values('xrootx@toluca.tecnm.mx','Axel','Flores','Orozco','XXX00XXX','XRoot1tecnmMX','Administrador','ROOT');
+insert into usuarios values('xrootx@toluca.tecnm.mx','Admin','Admin','Admin','XXX00XXX','XRoot1tecnmMX','Administrador','ROOT');
