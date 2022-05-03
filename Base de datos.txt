@@ -81,14 +81,14 @@ resumenPrimitivas varchar (100)
 ALTER TABLE Primitivas
 add constraint FOREIGN KEY (noFolio) REFERENCES Proyectos(noFolio);
 
-insert into carreras values('Administrador',0,0);
-insert into carreras values('Ingenieria en Sistemas Computacionales',50,60);
-insert into carreras values('Ingenieria Industrial',50,60);
-insert into carreras values('Ingenieria Logistica',50,60);
-insert into carreras values('Ingenieria Mecatronica',50,60);
-insert into carreras values('Ingenieria Electronica',50,60);
-insert into carreras values('Ingenieria Electromecanica',50,60);
-insert into carreras values('Ingenieria Quimica',50,60);
-insert into carreras values('Ingenieria en Gestion Empresarial',50,60);
-insert into carreras values('Ingenieria en TICs',50,60);
-insert into usuarios values('xrootx@toluca.tecnm.mx','Admin','Admin','Admin','XXX00XXX','XRoot1tecnmMX','Administrador','ROOT');
+insert into Carreras values('Administrador',0,0);
+insert into Carreras values('Ingenieria en Sistemas Computacionales',50,60);
+insert into Carreras values('Ingenieria Industrial',50,60);
+insert into Carreras values('Ingenieria Logistica',50,60);
+insert into Carreras values('Ingenieria Mecatronica',50,60);
+insert into Carreras values('Ingenieria Electronica',50,60);
+insert into Carreras values('Ingenieria Electromecanica',50,60);
+insert into Carreras values('Ingenieria Quimica',50,60);
+insert into Carreras values('Ingenieria en Gestion Empresarial',50,60);
+insert into Carreras values('Ingenieria en TICs',50,60);
+insert into Usuarios values('xrootx@toluca.tecnm.mx','Admin','Admin','Admin','XXX00XXX','XRoot1tecnmMX','Administrador','ROOT');
